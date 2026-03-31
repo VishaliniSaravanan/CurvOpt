@@ -1,0 +1,15 @@
+{
+  "name": "curvopt-monorepo",
+  "version": "2.0.0",
+  "description": "CurvOpt-LLM: Curvature-Guided LLM Optimization",
+  "private": true,
+  "scripts": {
+    "start": "cd frontend && npm run build && npm start",
+    "dev": "cd frontend && npm run dev",
+    "install-all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "build": "cd frontend && npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

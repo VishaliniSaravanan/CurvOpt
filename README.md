@@ -3,11 +3,6 @@
 > **Curvature & Information Aware Compute Optimizer for LLMs**  
 > Smarter Models, Smaller Footprint.
 
-**Authors:** Vishalini S, Girisha Malini N, Syed Ameen G  
-**Mentor:** Dr. Vinoth Chakravarthy  
-**Institution:** Velammal College of Engineering and Technology, Dept. of CSE
-
----
 
 ## Overview
 
@@ -52,7 +47,70 @@ For CUDA INT8 support:
 pip install bitsandbytes --upgrade
 ```
 
+### Step 2 — Install Frontend dependencies
+
+```bash
+cd frontend
+npm install
+```
+
+### Step 3 — Run the Application
+
+**Terminal 1 — Backend (Flask)**
+```bash
+cd backend
+python app.py
+```
+
+**Terminal 2 — Frontend (React)**
+```bash
+cd frontend
+npm run dev
+```
+
+Open your browser to `http://localhost:5173`
+
 ---
+
+## Features
+
+- 🎯 **Fisher-Guided Optimization** — Identifies and preserves accuracy-critical layers
+- 🔧 **Hardware-Aware Precision Reduction** — Automatic INT8 quantization via bitsandbytes
+- 📊 **Real-time Monitoring** — Server-Sent Events for live optimization feedback
+- 🚀 **Production-Ready** — Memory/latency reduction with minimal accuracy loss
+- 🎨 **User-Friendly Interface** — Interactive React frontend for model analysis
+
+---
+
+## Project Structure
+
+```
+CurvOpt/
+├── backend/           # Flask API + ML core
+│   ├── app.py        # Main application
+│   └── requirements.txt
+├── frontend/         # React + Vite UI
+│   ├── src/
+│   ├── index.html
+│   └── package.json
+└── README.md
+```
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Contributors
+
+**Vishalini Saravanan**
+
+---
+
+**Last Updated:** March 31, 2026
 
 ### Step 2 — HuggingFace login *(gated models only)*
 

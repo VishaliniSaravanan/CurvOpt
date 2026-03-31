@@ -9,8 +9,12 @@ export default defineConfig({
       "/api": {
         target: "http://localhost:5000",
         changeOrigin: true,
-        secure: false
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ""),
       }
     }
+  },
+  define: {
+    'import.meta.env.MODE': JSON.stringify(process.env.NODE_ENV || 'development')
   }
 });

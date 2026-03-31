@@ -3,13 +3,15 @@
   "version": "2.0.0",
   "description": "CurvOpt-LLM: Curvature-Guided LLM Optimization",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "cd frontend && npm run build && npm start",
+    "start": "node ./frontend/server.js",
     "dev": "cd frontend && npm run dev",
-    "install-all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm install && npm run build",
+    "install-all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "devDependencies": {}
 }

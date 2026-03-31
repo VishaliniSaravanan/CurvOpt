@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: curvopt-frontend
+    runtime: node
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_API_URL
+        value: https://curvopt.onrender.com/api
+    autoDeploy: true
+    
+  - type: web
+    name: curvopt-backend
+    runtime: python
+    pythonVersion: 3.11
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && flask run --host=0.0.0.0 --port=5000
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_APP
+        value: app.py
+    autoDeploy: true

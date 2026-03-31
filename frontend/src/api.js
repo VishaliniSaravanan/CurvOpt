@@ -3,10 +3,7 @@
  * Automatically routes to the correct backend based on environment
  */
 
-const API_BASE_URL = 
-  import.meta.env.MODE === 'production'
-    ? 'https://curvopt.onrender.com/api'  // Production: Render backend
-    : '/api';  // Development: Vite proxy to localhost:5000
+const API_BASE_URL = '/api';  // Uses proxy in production, Vite proxy in development
 
 /**
  * Make API request with proper headers
